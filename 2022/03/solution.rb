@@ -15,7 +15,7 @@ def part_1(bags)
   bags.each do |bag|
     pockets = bag.chars
                  .each_slice(bag.size / 2)
-                 .map { |pockets| pockets.to_a }
+                 .map(&:to_a)
 
     repeated = pockets[0] & pockets[1]
     total_priorities += calculate_value(repeated.first)
