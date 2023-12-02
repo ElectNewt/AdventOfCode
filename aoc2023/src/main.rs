@@ -3,16 +3,17 @@ use std::io::{self, Read};
 
 mod days {
     pub mod day01;
+    pub mod day02;
 }
 
 
 fn main() {
-    let relative_path = "day01/input.txt";
+    let relative_path = "day02/input.txt";
     match read_daily_file(relative_path) {
         Ok(content) => {
-           // let result01 = days::day01::task_one(content.to_string());
+            //let result01 = days::day02::task_one(content.to_string());
             //println!("Task 1: {} \n", result01);
-            let result02 = days::day01::task_two(content.to_string());
+            let result02 = days::day02::task_two(content.to_string());
             println!("Task 2: {} \n", result02);
             Ok(())
         }
