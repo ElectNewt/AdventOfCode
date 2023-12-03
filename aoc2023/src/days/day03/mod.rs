@@ -285,13 +285,6 @@ fn is_symbol(value: char) -> bool {
 }
 
 fn is_gear(value: char) -> bool {
-    if value.is_digit(10) {
-        return false;
-    }
-
-    if value == '.' {
-        return false;
-    }
     if value == '*' {
         return true;
     }
