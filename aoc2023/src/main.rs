@@ -6,17 +6,18 @@ mod days {
     pub mod day02;
     pub mod day03;
     pub mod day04;
+    pub mod day05;
 }
 
 
 fn main() {
-    let relative_path = "day04/input.txt";
+    let relative_path = "day05/sample.txt";
     match read_daily_file(relative_path) {
         Ok(content) => {
-            let result01 = days::day04::task_one(content.to_string());
+            let result01 = days::day05::task_one(content.to_string());
             println!("Task 1: {} \n", result01);
-            let result02 = days::day04::task_two(content.to_string());
-            println!("Task 2: {} \n", result02);
+         //   let result02 = days::day05::task_two(content.to_string());
+            //println!("Task 2: {} \n", result02);
             Ok(())
         }
         Err(e) => Err(e),
